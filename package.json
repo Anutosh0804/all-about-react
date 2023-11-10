@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Everything related to reactJS be it learning it or making cool projects using it.",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {

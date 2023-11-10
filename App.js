@@ -1,38 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-/**
- * 
- * <div id="parent">
- *      <div id="childOne">
- *          <h1>Hello</h1>
- *          <p>This is inside child one.</p>
- *      </div>
- *      <div id="childTwo">
- *          <h1>Hello Again</h1>
- *          <p>This is inside child two.</p>
- *      </div>
- * </div>
- * 
- */
+//JSX =>Babel transpiles it to React.creatElement => React.creatElement (JS Obj) => HTML Element(Render)
 
-const parent = React.createElement("div", { id: "parent" },
-    [
-        React.createElement("div", { id: "childOne" },
-            [
-                React.createElement("h1", {}, "Hello"),
-                React.createElement("p", {}, "This is inside child one.")
-            ]),
-        React.createElement("div", { id: "childTwo" },
-            [
-                React.createElement("h1", {}, "Hello Again"),
-                React.createElement("p", {}, "This is inside child two.")
-            ])
-    ]
-);
+//React Element
+//const heading = <h1>Hello from JSX</h1>;
 
-const heading = React.createElement("h1", { id: "heading" }, "Hello from ReactJS");
-console.log(heading) //JS Object
+//React Component
+const TitleComponent = () => {
+    return <h1>React Component</h1>
+}
+
+const DescriptionComponent = () =>{
+    return (
+        //Composite Component
+        <div>
+            <TitleComponent />
+            <p>This is React Component.</p>
+        </div>
+    )
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+root.render(<DescriptionComponent />);
