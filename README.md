@@ -1,6 +1,7 @@
 # All about ReactJS
 
 # Parcel
+
 - Dev Build
 - Local Sever
 - HMR = Hot Module Replacement
@@ -18,3 +19,20 @@
 - HTTPs
 - Tree Shaking (remove unused code for you)
 - Different dev and prod bundles
+
+# Food App
+
+- App
+  - Header
+    - Logo
+    - Nav Items
+  - Body
+    - Search
+    - RestaurantContainer
+      - RestaurantCards
+        - RestaurantImg
+        - Name
+        - Rating
+  - Footer
+    - Copyright
+    - Links
